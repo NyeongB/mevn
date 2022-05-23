@@ -1,0 +1,6 @@
+#폴더 전체
+test/node_modules
+
+# test 안에있는 파일
+test/package-lock.json
+test/package.json
