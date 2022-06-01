@@ -53,3 +53,36 @@
 // const a = [1, 2, 3, 4, 5];
 // console.log(a.indexOf(3));
 // console.log(a.findIndex((e) => e === 3)); // 보통은 findIndex가 더 빠름
+
+//2.6.1
+// const name = "choi";
+// const age = 30;
+// const job = "SM";
+
+// const data_used_ES6 = { name, age, job };
+// console.log(data_used_ES6);
+
+// const a = (b, ...rest) => {
+//   console.log(rest);
+// };
+// a(1, 2, 3);
+
+// const b = [1, 2, 3, 4];
+// const a2 = (a, b, c, d) => console.log(a, b, c, d);
+// a2(...b); // 분해해서 매개변수로 담음
+
+// const a = [1, 2, 3, 4];
+// console.log(Math.max(...a));
+
+//2.6.3 구조분해할당
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];
+
+// console.log(a, b);
+
+// const e = [1, 2, 3, 4];
+// const d = () => [1, 2, 3, 4];
+// const [a, b, c] = e;
+// console.log(a, b, c);
