@@ -125,3 +125,57 @@
 // }, 5000);
 
 // console.log("kundol");
+
+//Promise를 이용한 예
+
+// const a = (c = "Naver") => {
+//   return new Promise((resolve, reject) => {
+//     // 비동기 함수로직
+//     setTimeout(() => {
+//       resolve(`${c}로부터 받은 사랑`);
+//     }, 1 * 1000);
+//   });
+// };
+
+// a()
+//   .then((ret) => {
+//     console.log(ret);
+//     return a(`Kakao`);
+//   })
+//   .then((ret) => {
+//     console.log(ret);
+//   });
+
+const a1 = () => {
+  return new Promise((resolve, reject) => {
+    const delay = Math.random() * 100;
+    setTimeout(() => {
+      console.log(1);
+      resolve(1);
+    }, delay);
+  });
+};
+
+const a2 = () => {
+  return new Promise((resolve, reject) => {
+    const delay = Math.random() * 100;
+    setTimeout(() => {
+      console.log(2);
+      resolve(2);
+    }, delay);
+  });
+};
+
+const a3 = () => {
+  return new Promise((resolve, reject) => {
+    const delay = Math.random() * 100;
+    setTimeout(() => {
+      console.log(3);
+      resolve(3);
+    }, delay);
+  });
+};
+
+a1()
+  .then((ret) => a2())
+  .then((ret) => a3());
