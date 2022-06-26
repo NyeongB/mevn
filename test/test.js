@@ -146,36 +146,76 @@
 //     console.log(ret);
 //   });
 
-const a1 = () => {
-  return new Promise((resolve, reject) => {
-    const delay = Math.random() * 100;
+// const a1 = () => {
+//   return new Promise((resolve, reject) => {
+//     const delay = Math.random() * 100;
+//     setTimeout(() => {
+//       console.log(1);
+//       resolve(1);
+//     }, delay);
+//   });
+// };
+
+// const a2 = () => {
+//   return new Promise((resolve, reject) => {
+//     const delay = Math.random() * 100;
+//     setTimeout(() => {
+//       console.log(2);
+//       resolve(2);
+//     }, delay);
+//   });
+// };
+
+// const a3 = () => {
+//   return new Promise((resolve, reject) => {
+//     const delay = Math.random() * 100;
+//     setTimeout(() => {
+//       console.log(3);
+//       resolve(3);
+//     }, delay);
+//   });
+// };
+
+// a1()
+//   .then((ret) => a2())
+//   .then((ret) => a3());
+
+//2.7.3 async , await
+
+const a = () => {
+  new Promise((resolve, reject) => {
+    const time = Math.random * 100;
     setTimeout(() => {
       console.log(1);
       resolve(1);
-    }, delay);
+    }, time);
   });
 };
 
-const a2 = () => {
-  return new Promise((resolve, reject) => {
-    const delay = Math.random() * 100;
+const b = () => {
+  new Promise((resolve, reject) => {
+    const time = Math.random * 100;
     setTimeout(() => {
       console.log(2);
       resolve(2);
-    }, delay);
+    }, time);
   });
 };
 
-const a3 = () => {
-  return new Promise((resolve, reject) => {
-    const delay = Math.random() * 100;
+const c = () => {
+  new Promise((resolve, reject) => {
+    const time = Math.random * 100;
     setTimeout(() => {
       console.log(3);
       resolve(3);
-    }, delay);
+    }, time);
   });
 };
 
-a1()
-  .then((ret) => a2())
-  .then((ret) => a3());
+const main = async () => {
+  await a();
+  await b();
+  await c();
+};
+
+main();
