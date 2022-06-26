@@ -182,40 +182,60 @@
 
 //2.7.3 async , await
 
-const a = () => {
-  new Promise((resolve, reject) => {
-    const time = Math.random * 100;
-    setTimeout(() => {
-      console.log(1);
-      resolve(1);
-    }, time);
-  });
-};
+// const a = () => {
+//   new Promise((resolve, reject) => {
+//     const time = Math.random * 100;
+//     setTimeout(() => {
+//       console.log(1);
+//       resolve(1);
+//     }, time);
+//   });
+// };
 
-const b = () => {
-  new Promise((resolve, reject) => {
-    const time = Math.random * 100;
-    setTimeout(() => {
-      console.log(2);
-      resolve(2);
-    }, time);
-  });
-};
+// const b = () => {
+//   new Promise((resolve, reject) => {
+//     const time = Math.random * 100;
+//     setTimeout(() => {
+//       console.log(2);
+//       resolve(2);
+//     }, time);
+//   });
+// };
 
-const c = () => {
-  new Promise((resolve, reject) => {
-    const time = Math.random * 100;
-    setTimeout(() => {
-      console.log(3);
-      resolve(3);
-    }, time);
-  });
-};
+// const c = () => {
+//   new Promise((resolve, reject) => {
+//     const time = Math.random * 100;
+//     setTimeout(() => {
+//       console.log(3);
+//       resolve(3);
+//     }, time);
+//   });
+// };
 
-const main = async () => {
-  await a();
-  await b();
-  await c();
-};
+// const main = async () => {
+//   await a();
+//   await b();
+//   await c();
+// };
 
-main();
+// main();
+
+// 2.8.3 generator
+
+const log = console.log;
+
+function* gen() {
+  yield 10;
+  if (false) yield 10;
+  yield 30;
+  return 90;
+  yield 30;
+}
+
+let iter = gen();
+
+console.log(iter);
+log(iter.next());
+log(iter.next());
+log(iter.next());
+log(iter.next());
