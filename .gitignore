@@ -4,3 +4,9 @@ test/node_modules
 # test 안에있는 파일
 test/package-lock.json
 test/package.json
+test/ch4/portfollio/dist/imgs/amos.gif
+test/ch4/portfollio/dist/imgs/iu.gif
+test/ch4/portfollio/dist/imgs/knue.gif
+test/ch4/portfollio/dist/imgs/lucid.png
+test/ch4/portfollio/dist/imgs/mocha.png
+test/ch4/portfollio/dist/imgs/thou.gif
